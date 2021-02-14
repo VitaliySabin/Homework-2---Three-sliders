@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		6807391C25C570CC007767A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807391B25C570CC007767A5 /* AppDelegate.swift */; };
 		6807391E25C570CC007767A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807391D25C570CC007767A5 /* SceneDelegate.swift */; };
-		6807392025C570CC007767A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807391F25C570CC007767A5 /* ViewController.swift */; };
+		6807392025C570CC007767A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807391F25C570CC007767A5 /* SettingsViewController.swift */; };
 		6807392325C570CC007767A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6807392125C570CC007767A5 /* Main.storyboard */; };
 		6807392525C570CE007767A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6807392425C570CE007767A5 /* Assets.xcassets */; };
 		6807392825C570CE007767A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6807392625C570CE007767A5 /* LaunchScreen.storyboard */; };
+		68FC5CDF25D9813B00816D7B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC5CDE25D9813B00816D7B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6807391825C570CC007767A5 /* Homework 2 - Three sliders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homework 2 - Three sliders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6807391B25C570CC007767A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6807391D25C570CC007767A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6807391F25C570CC007767A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6807391F25C570CC007767A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6807392225C570CC007767A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6807392425C570CE007767A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6807392725C570CE007767A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6807392925C570CE007767A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68FC5CDE25D9813B00816D7B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		6807391A25C570CC007767A5 /* Homework 2 - Three sliders */ = {
 			isa = PBXGroup;
 			children = (
-				6807391B25C570CC007767A5 /* AppDelegate.swift */,
-				6807391D25C570CC007767A5 /* SceneDelegate.swift */,
-				6807391F25C570CC007767A5 /* ViewController.swift */,
-				6807392125C570CC007767A5 /* Main.storyboard */,
-				6807392425C570CE007767A5 /* Assets.xcassets */,
-				6807392625C570CE007767A5 /* LaunchScreen.storyboard */,
-				6807392925C570CE007767A5 /* Info.plist */,
+				68FC5CE125D9817B00816D7B /* ViewControllers */,
+				68FC5CE325D9819600816D7B /* Storyboards */,
+				68FC5CE525D981C400816D7B /* Supporting files */,
+				68FC5CE425D981AE00816D7B /* Resourses */,
 			);
 			path = "Homework 2 - Three sliders";
+			sourceTree = "<group>";
+		};
+		68FC5CE125D9817B00816D7B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				68FC5CDE25D9813B00816D7B /* MainViewController.swift */,
+				6807391F25C570CC007767A5 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		68FC5CE325D9819600816D7B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6807392625C570CE007767A5 /* LaunchScreen.storyboard */,
+				6807392125C570CC007767A5 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		68FC5CE425D981AE00816D7B /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				6807392425C570CE007767A5 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		68FC5CE525D981C400816D7B /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				6807391B25C570CC007767A5 /* AppDelegate.swift */,
+				6807391D25C570CC007767A5 /* SceneDelegate.swift */,
+				6807392925C570CE007767A5 /* Info.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6807392025C570CC007767A5 /* ViewController.swift in Sources */,
+				6807392025C570CC007767A5 /* SettingsViewController.swift in Sources */,
 				6807391C25C570CC007767A5 /* AppDelegate.swift in Sources */,
 				6807391E25C570CC007767A5 /* SceneDelegate.swift in Sources */,
+				68FC5CDF25D9813B00816D7B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Homework 2 - Three sliders/Info.plist";
+				INFOPLIST_FILE = "Homework 2 - Three sliders/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Homework 2 - Three sliders/Info.plist";
+				INFOPLIST_FILE = "Homework 2 - Three sliders/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
