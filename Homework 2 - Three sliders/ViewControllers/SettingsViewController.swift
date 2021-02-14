@@ -19,6 +19,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var delegate: SettingsViewControllerDelegate!
+    var mainViewColor: UIColor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,14 +30,13 @@ class SettingsViewController: UIViewController {
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         
-        colorChange()
+        mainView.backgroundColor = mainViewColor
         
         setValue(for: redSliderValue, greenSliderValue, blueSliderValue)
     }
     
     
     @IBAction func slidersAction(_ sender: UISlider) {
-        colorChange()
         
         switch sender.tag {
         case 0: redSliderValue.text = string(from: sender)
@@ -42,6 +44,13 @@ class SettingsViewController: UIViewController {
         case 2: blueSliderValue.text = string(from: sender)
         default: break
         }
+        
+        colorChange()
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        delegate.changeColor(mainView.backgroundColor ?? .black)
+        dismiss(animated: true)
     }
     
     private func colorChange() {
