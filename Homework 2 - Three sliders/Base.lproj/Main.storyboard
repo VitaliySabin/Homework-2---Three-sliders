@@ -4,11 +4,35 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="NdA-Dd-Cjf">
+            <objects>
+                <viewController id="UAB-qd-nk6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="to4-3e-dty">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1kJ-9f-Yvz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f6t-MO-EwD">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="FY4-7G-7C1">
+                            <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="large" renderingMode="template"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="6oX-cu-jjG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDc-Y3-uyi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241.875" y="83.450704225352112"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -101,16 +125,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkS-e8-09u">
+                                <rect key="frame" x="133.5" y="440" width="53" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Save"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="kZg-bv-cqX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0JU-ao-LPu"/>
                             <constraint firstItem="kZg-bv-cqX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.28169" id="1bf-cI-SHA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tkS-e8-09u" secondAttribute="bottom" constant="86" id="3b1-3B-yCc"/>
                             <constraint firstItem="kZg-bv-cqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6d9-3R-4JM"/>
                             <constraint firstItem="kZg-bv-cqX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9ON-Sa-bY7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x2y-Qd-K7y" secondAttribute="trailing" constant="16" id="QAY-ys-peo"/>
+                            <constraint firstItem="tkS-e8-09u" firstAttribute="top" relation="greaterThanOrEqual" secondItem="x2y-Qd-K7y" secondAttribute="bottom" constant="130" id="TKH-eY-eV1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kZg-bv-cqX" secondAttribute="trailing" constant="16" id="b1Q-zL-034"/>
+                            <constraint firstItem="tkS-e8-09u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cOR-Ir-SKh"/>
                             <constraint firstItem="x2y-Qd-K7y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tdA-AS-AM1"/>
                             <constraint firstItem="x2y-Qd-K7y" firstAttribute="top" secondItem="kZg-bv-cqX" secondAttribute="bottom" constant="20" id="ykD-fT-epK"/>
                         </constraints>
@@ -127,10 +159,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="83.450704225352112"/>
+            <point key="canvasLocation" x="1028" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W7r-XC-bb8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EfD-rY-RCk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="649-Wi-i03">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UAB-qd-nk6" kind="relationship" relationship="rootViewController" id="Rv4-4Y-eBE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf4-ou-NR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-578" y="83"/>
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
